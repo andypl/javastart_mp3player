@@ -1,11 +1,12 @@
 package pl.javastart.mp3player.main;
 
         import javafx.application.Application;
-        import javafx.fxml.FXMLLoader;
-        import javafx.scene.Scene;
-        import javafx.scene.layout.AnchorPane;
-        import javafx.stage.Stage;
-        import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Main extends Application {
 
@@ -16,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/helloView.fxml"));
+        BorderPane anchorPane = FXMLLoader.load(getClass().getResource("/helloView.fxml"));
         Scene scene = new Scene(anchorPane);
         stage.setScene(scene);
         System.out.println("Start");
