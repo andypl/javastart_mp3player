@@ -1,6 +1,6 @@
 package pl.javastart.mp3player.main;
 
-        import javafx.application.Application;
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
