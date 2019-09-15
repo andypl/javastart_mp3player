@@ -1,74 +1,20 @@
 package pl.javastart.mp3player.controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TableView;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
 
 public class MainController {
 
     @FXML
-    private BorderPane borderPane;
-
+    private ContentPaneController contentPaneController;
     @FXML
-    private MenuItem fileMenuItem;
-
+    private ControlPaneController controlPaneController;
     @FXML
-    private MenuItem dirMenuItem;
+    private MenuPaneController menuPaneController;
 
-    @FXML
-    private MenuItem closeMenuItem;
-
-    @FXML
-    private MenuItem aboutMenuItem;
-
-    @FXML
-    private TableView<?> contenTable;
-
-    @FXML
-    private Button previousButton;
-
-    @FXML
-    private ToggleButton playButton;
-
-    @FXML
-    private Button nextButton;
-
-    @FXML
-    private Slider volumeSlider;
-
-    @FXML
-    private Slider progressSlider;
-
-    public void initialize(){
-
+    public void initialize() {
         System.out.println("Main controller created");
-        configureVolume();
-        configureButtons();
-
+        System.out.println(contentPaneController);
+        System.out.println(controlPaneController);
+        System.out.println(menuPaneController);
     }
-    private void configureVolume(){
-        volumeSlider.addEventFilter(MouseEvent.MOUSE_PRESSED,event ->
-                System.out.println("Wciśnięto przycisk na suwaku głośności"));
-    }
-
-    private  void configureButtons(){
-        previousButton.setOnAction(event ->
-                System.out.print("Poprzednia piosenka"));
-        nextButton.setOnAction(event -> System.out.println("Następna piosenka"));
-        playButton.setOnAction(event -> {
-            if (playButton.isSelected()) {
-                System.out.println("Play");
-            } else {
-                System.out.println("Stop");
-            }
-        });
-    }
-
-
-
 }
