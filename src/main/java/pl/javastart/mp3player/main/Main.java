@@ -21,7 +21,7 @@ public class Main extends Application {
         Scene scene = new Scene(anchorPane);
         stage.setScene(scene);
         System.out.println("Start");
-        stage.setTitle("Hello FX!");
+        stage.setTitle("MP3 Player");
         stage.show();
     }
 
